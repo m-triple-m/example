@@ -1,0 +1,58 @@
+<div class="container">
+    <form [formGroup]="registerForm" (ngSubmit)="onFormSubmit(registerForm.value)">
+        <div class="card mt-5">
+            <div class="card-header">
+                <h4 class="card-title">Add New Location</h4>
+            </div>
+            <div class="card-body">
+                <div class="row mt-3">
+                    <div class="col-md-3"><label class="col-form-label" for="city">City : </label></div>
+                    <input formControlName="city" id="city" class="form-control col-md-8">
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-3"><label class="col-form-label" for="totalSize">Total Size: </label></div>
+                    <input formControlName="totalSize" id="totalSize" class="form-control col-md-8" type="number">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div formGroupName="sizes">
+                            <div class="row mt-3">
+                                <div class="col-md-3">
+                                    <label class="col-form-label" for="size_30">Size 30 : </label>
+                                </div>
+                                <input formControlName="size_30" id="size_30" class="form-control col-md-8"
+                                    type="number">
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-3"><label class="col-form-label" for="size_50">Size 50 : </label>
+                                </div>
+                                <input formControlName="size_50" id="size_50" class="form-control col-md-8"
+                                    type="number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div formGroupName="prices">
+                            <div class="row mt-3">
+                                <div class="col-md-3"><label class="col-form-label" for="size_30">Price : </label></div>
+                                <input formControlName="size_30" id="size_30" class="form-control col-md-8"
+                                    type="number">
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-3"><label class="col-form-label" for="size_50">Price : </label></div>
+                                <input formControlName="size_50" id="size_50" class="form-control col-md-8"
+                                    type="number">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary mt-5">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
